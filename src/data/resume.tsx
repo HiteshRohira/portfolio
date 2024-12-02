@@ -58,7 +58,7 @@ export const DATA = {
       title: "SDE-1 Design & Front-end",
       logoUrl: "/astra.png",
       start: "October 2022",
-      // end: "Oct 2022",
+      end: "Present",
       description:
         `Led end-to-end development of a product in React & NextJS from concept to launch, including architectural decisions.`,
     },
@@ -89,7 +89,7 @@ export const DATA = {
     {
       title: "Whatsapp Chat Opener",
       href: "https://wcl.vercel.app/",
-      // dates: "Jan 2024 - Feb 2024",
+      dates: "Jan 2024 - Feb 2024",
       active: true,
       description:
         "Before whatsapp had this native functionality, I felt the need for a tool to open a whatsapp chat for a new number",
@@ -111,13 +111,12 @@ export const DATA = {
         },
       ],
       image: "/wcl.png",
-      // video:
-      //   "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+      video: "",
     },
     {
       title: "Movie Watchlist App",
       href: "https://movielisterbyhr.netlify.app/",
-      // dates: "June 2023 - Present",
+      dates: "June 2023 - Present",
       active: true,
       description:
         "An app that makes request to the tMDB API and gets movies and lets user add it to his watching list. Just simple practice website I made to learn React",
@@ -139,7 +138,7 @@ export const DATA = {
         },
       ],
       image: "/movie-watchlist.png",
-      // video: "https://cdn.magicui.design/bento-grid.mp4",
+      video: "",
     },
   ],
 } as const;
