@@ -63,7 +63,7 @@ export const DATA = {
         `Led end-to-end development of a product in React & NextJS from concept to launch, including architectural decisions.`,
     },
     {
-      company: "Astra Securty",
+      company: "Astra Security",
       badges: [],
       href: "getastra.com",
       location: "Remote",
