@@ -15,6 +15,7 @@ export const DATA = {
     "Typescript",
     "Javascript",
     "Python",
+    "Django",
     "SQL",
     "TailwindCSS",
     "Zod",
