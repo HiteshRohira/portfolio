@@ -14,6 +14,8 @@ export const DATA = {
     "Next.js",
     "Typescript",
     "Javascript",
+    "Python",
+    "SQL",
     "TailwindCSS",
     "Zod",
     "ShadCn",
