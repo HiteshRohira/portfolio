@@ -90,6 +90,28 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Django Tasks App",
+      href: "https://github.com/HiteshRohira/django-todo-app",
+      dates: "Dec 2025 - Jan 2025",
+      active: true,
+      description:
+        "A backend-only Django project demonstrating CRUD functionality with a Task model. Includes endpoints for creating, reading, updating, and deleting tasks, with a simple SQLite database.",
+      technologies: [
+        "Django",
+        "Python",
+        "HTML",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/HiteshRohira/django-todo-app",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/django-tasks-app.png",
+      video: "",
+    },
+    {
       title: "Whatsapp Chat Opener",
       href: "https://wcl.vercel.app/",
       dates: "Jan 2024 - Feb 2024",
