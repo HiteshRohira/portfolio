@@ -7,7 +7,7 @@ export const DATA = {
   description:
     "A self taught web developer passionate about building great UX experiences.",
   summary:
-    "By the end of my graduation in 2021, I realised my love for web development and made the switch. Since then I have been working for the last 3.9+ years at Astra Security. I have helped ship 2 products, the latest one being our Saas dashboard where I helped architect and build an effective foundation.",
+    "By the end of my graduation in 2021, I realised my love for web development and made the switch. Since then I have been working for the last 4+ years at Astra Security. I have helped ship 2 products, the latest one being our Saas dashboard where I helped architect and build an effective foundation.",
   avatarUrl: "/me.png",
   skills: [
     "React",
@@ -47,6 +47,12 @@ export const DATA = {
         name: "Email",
         url: "mailto:hiteshrohira15@gmail.com",
         icon: Icons.email,
+        navbar: true,
+      },
+      Twitter: {
+        name: "X.com",
+        url: "https://x.com/HiteshRohira15",
+        icon: Icons.x,
         navbar: true,
       },
     },
@@ -104,6 +110,11 @@ export const DATA = {
         "ShadCn",
       ],
       links: [
+        {
+          type: "Website",
+          href: "https://opendraw.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
         {
           type: "Source",
           href: "https://github.com/HiteshRohira/opendraw",
