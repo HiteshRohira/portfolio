@@ -90,6 +90,30 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "OpenDraw",
+      href: "https://opendraw.vercel.app/",
+      dates: "Dec 2025 - Jan 2025",
+      active: true,
+      description:
+        "Opensource Excalidraw with local file management.",
+      technologies: [
+        "React",
+        "Vite",
+        "Typescript",
+        "TailwindCSS",
+        "ShadCn",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/HiteshRohira/opendraw",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/opendraw.png",
+      video: "",
+    },
+    {
       title: "Django Tasks App",
       href: "https://github.com/HiteshRohira/django-todo-app",
       dates: "Dec 2025 - Jan 2025",
