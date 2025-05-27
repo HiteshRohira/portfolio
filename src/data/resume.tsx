@@ -5,7 +5,7 @@ export const DATA = {
   initials: "HR",
   url: "https://www.linkedin.com/in/hiteshrohira/",
   description:
-    "A self taught web developer passionate about building great UX experiences.",
+    "A web developer passionate about building great UX experiences.",
   summary:
     "By the end of my graduation in 2021, I realised my love for web development and made the switch. Since then I have been working for the last 4+ years at Astra Security. I have helped ship 2 products, the latest one being our Saas dashboard where I helped architect and build an effective foundation.",
   avatarUrl: "/me.png",
@@ -14,6 +14,7 @@ export const DATA = {
     "Next.js",
     "Typescript",
     "Javascript",
+    "Remix",
     "Python",
     "Django",
     "SQL",
@@ -25,7 +26,7 @@ export const DATA = {
     "Tanstack Table",
     "Figma",
     "Git/Github",
-    "Webflow",    
+    "Webflow",
   ],
   contact: {
     email: "hiteshrohira15@gmail.com",
@@ -36,24 +37,28 @@ export const DATA = {
         url: "https://github.com/HiteshRohira",
         icon: Icons.github,
         navbar: true,
+        posthogEvent: "github_clicked",
       },
       LinkedIn: {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/hiteshrohira/",
         icon: Icons.linkedin,
         navbar: true,
+        posthogEvent: "linkedin_clicked",
       },
       email: {
         name: "Email",
         url: "mailto:hiteshrohira15@gmail.com",
         icon: Icons.email,
         navbar: true,
+        posthogEvent: "email_clicked",
       },
       Twitter: {
         name: "X.com",
         url: "https://x.com/HiteshRohira15",
         icon: Icons.x,
         navbar: true,
+        posthogEvent: "twitter_clicked",
       },
     },
   },
@@ -62,26 +67,25 @@ export const DATA = {
     {
       company: "Astra Security",
       href: "getastra.com",
-      badges: ['Current'],
+      badges: [],
       location: "Remote",
       title: "SDE-1 Design & Front-end",
       logoUrl: "/astra.png",
       start: "October 2022",
-      end: "Present",
+      end: "May 2025",
       description:
-        `Led end-to-end development of a product in React & NextJS from concept to launch, including architectural decisions.`,
+        "Led end-to-end development of a product in React & NextJS from concept to launch, including architectural decisions.",
     },
     {
       company: "Astra Security",
       badges: [],
       href: "getastra.com",
       location: "Remote",
-      title: "Frontend Web Developer",
+      title: "SDE-1 Front-end",
       logoUrl: "/astra.png",
       start: "February 2021",
       end: "October 2022",
-      description:
-        `Played a key role in developing the initial version of the company's frontend dashboard, focusing on performance and usability.`,
+      description: `Played a key role in developing the initial version of the company's frontend dashboard, focusing on performance and usability.`,
     },
   ],
   education: [
@@ -100,15 +104,8 @@ export const DATA = {
       href: "https://opendraw.vercel.app/",
       dates: "Dec 2025 - Jan 2025",
       active: true,
-      description:
-        "Opensource Excalidraw with local file management.",
-      technologies: [
-        "React",
-        "Vite",
-        "Typescript",
-        "TailwindCSS",
-        "ShadCn",
-      ],
+      description: "Opensource Excalidraw with local file management.",
+      technologies: ["React", "Vite", "Typescript", "TailwindCSS", "ShadCn"],
       links: [
         {
           type: "Website",
@@ -131,11 +128,7 @@ export const DATA = {
       active: true,
       description:
         "A backend-only Django project demonstrating CRUD functionality with a Task model. Includes endpoints for creating, reading, updating, and deleting tasks, with a simple SQLite database.",
-      technologies: [
-        "Django",
-        "Python",
-        "HTML",
-      ],
+      technologies: ["Django", "Python", "HTML"],
       links: [
         {
           type: "Source",
@@ -153,11 +146,7 @@ export const DATA = {
       active: true,
       description:
         "Before whatsapp had this native functionality, I felt the need for a tool to open a whatsapp chat for a new number",
-      technologies: [
-        "Next.js",
-        "React",
-        "TailwindCSS",
-      ],
+      technologies: ["Next.js", "React", "TailwindCSS"],
       links: [
         {
           type: "Website",
@@ -180,11 +169,7 @@ export const DATA = {
       active: true,
       description:
         "An app that makes request to the tMDB API and gets movies and lets user add it to his watching list. Just simple practice website I made to learn React",
-      technologies: [
-        "React",
-        "Axios",
-        "Context API",
-      ],
+      technologies: ["React", "Axios", "Context API"],
       links: [
         {
           type: "Website",
