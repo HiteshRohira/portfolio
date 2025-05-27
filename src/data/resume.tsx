@@ -6,8 +6,8 @@ export const DATA = {
   url: "https://www.linkedin.com/in/hiteshrohira/",
   description:
     "A web developer passionate about building great UX experiences.",
-  summary:
-    "By the end of my graduation in 2021, I realised my love for web development and made the switch. Since then I have been working for the last 4+ years at Astra Security. I have helped ship 2 products, the latest one being our Saas dashboard where I helped architect and build an effective foundation.",
+  summary: `Since graduating in 2021, I’ve been working as a software developer focusing on React, Next.js, and TypeScript. Over the past 4+ years, I’ve had the opportunity to help launch two products at Astra Security, including a SaaS dashboard where I worked on building a solid and scalable foundation.
+  \n I love crafting intuitive and engaging user experiences and enjoy working in fast-paced environments where I can learn, grow, and make an impact.`,
   avatarUrl: "/me.png",
   skills: [
     "React",
