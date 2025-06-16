@@ -66,7 +66,7 @@ export const DATA = {
   work: [
     {
       company: "Astra Security",
-      href: "getastra.com",
+      href: "https://www.getastra.com/",
       badges: [],
       location: "Remote",
       title: "SDE-1 Design & Front-end",
@@ -79,7 +79,7 @@ export const DATA = {
     {
       company: "Astra Security",
       badges: [],
-      href: "getastra.com",
+      href: "https://www.getastra.com/",
       location: "Remote",
       title: "SDE-1 Front-end",
       logoUrl: "/astra.png",
@@ -92,98 +92,98 @@ export const DATA = {
     {
       school: "Delhi University",
       href: "https://www.du.ac.in/",
-      degree: "Bachelor's in Management Studies (BMS)",
+      degree: "Bachelors",
       logoUrl: "/du.png",
       start: "2018",
       end: "2021",
     },
   ],
   projects: [
-    {
-      title: "OpenDraw",
-      href: "https://opendraw.vercel.app/",
-      dates: "Dec 2025 - Jan 2025",
-      active: true,
-      description: "Opensource Excalidraw with local file management.",
-      technologies: ["React", "Vite", "Typescript", "TailwindCSS", "ShadCn"],
-      links: [
-        {
-          type: "Website",
-          href: "https://opendraw.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/HiteshRohira/opendraw",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/opendraw.png",
-      video: "",
-    },
-    {
-      title: "Django Tasks App",
-      href: "https://github.com/HiteshRohira/django-todo-app",
-      dates: "Dec 2025 - Jan 2025",
-      active: true,
-      description:
-        "A backend-only Django project demonstrating CRUD functionality with a Task model. Includes endpoints for creating, reading, updating, and deleting tasks, with a simple SQLite database.",
-      technologies: ["Django", "Python", "HTML"],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/HiteshRohira/django-todo-app",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/django-tasks-app.png",
-      video: "",
-    },
-    {
-      title: "Whatsapp Chat Opener",
-      href: "https://wcl.vercel.app/",
-      dates: "Jan 2024 - Feb 2024",
-      active: true,
-      description:
-        "Before whatsapp had this native functionality, I felt the need for a tool to open a whatsapp chat for a new number",
-      technologies: ["Next.js", "React", "TailwindCSS"],
-      links: [
-        {
-          type: "Website",
-          href: "https://wcl.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/HiteshRohira/whats-chat-linker/",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/wcl.png",
-      video: "",
-    },
-    {
-      title: "Movie Watchlist App",
-      href: "https://movielisterbyhr.netlify.app/",
-      dates: "June 2023 - Present",
-      active: true,
-      description:
-        "An app that makes request to the tMDB API and gets movies and lets user add it to his watching list. Just simple practice website I made to learn React",
-      technologies: ["React", "Axios", "Context API"],
-      links: [
-        {
-          type: "Website",
-          href: "https://movielisterbyhr.netlify.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/HiteshRohira/movie-list-maker/",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/movie-watchlist.png",
-      video: "",
-    },
+    // {
+    //   title: "OpenDraw",
+    //   href: "https://opendraw.vercel.app/",
+    //   dates: "Dec 2025 - Jan 2025",
+    //   active: true,
+    //   description: "Opensource Excalidraw with local file management.",
+    //   technologies: ["React", "Vite", "Typescript", "TailwindCSS", "ShadCn"],
+    //   links: [
+    //     {
+    //       type: "Website",
+    //       href: "https://opendraw.vercel.app/",
+    //       icon: <Icons.globe className="size-3" />,
+    //     },
+    //     {
+    //       type: "Source",
+    //       href: "https://github.com/HiteshRohira/opendraw",
+    //       icon: <Icons.github className="size-3" />,
+    //     },
+    //   ],
+    //   image: "/opendraw.png",
+    //   video: "",
+    // },
+    // {
+    //   title: "Django Tasks App",
+    //   href: "https://github.com/HiteshRohira/django-todo-app",
+    //   dates: "Dec 2025 - Jan 2025",
+    //   active: true,
+    //   description:
+    //     "A backend-only Django project demonstrating CRUD functionality with a Task model. Includes endpoints for creating, reading, updating, and deleting tasks, with a simple SQLite database.",
+    //   technologies: ["Django", "Python", "HTML"],
+    //   links: [
+    //     {
+    //       type: "Source",
+    //       href: "https://github.com/HiteshRohira/django-todo-app",
+    //       icon: <Icons.github className="size-3" />,
+    //     },
+    //   ],
+    //   image: "/django-tasks-app.png",
+    //   video: "",
+    // },
+    // {
+    //   title: "Whatsapp Chat Opener",
+    //   href: "https://wcl.vercel.app/",
+    //   dates: "Jan 2024 - Feb 2024",
+    //   active: true,
+    //   description:
+    //     "Before whatsapp had this native functionality, I felt the need for a tool to open a whatsapp chat for a new number",
+    //   technologies: ["Next.js", "React", "TailwindCSS"],
+    //   links: [
+    //     {
+    //       type: "Website",
+    //       href: "https://wcl.vercel.app/",
+    //       icon: <Icons.globe className="size-3" />,
+    //     },
+    //     {
+    //       type: "Source",
+    //       href: "https://github.com/HiteshRohira/whats-chat-linker/",
+    //       icon: <Icons.github className="size-3" />,
+    //     },
+    //   ],
+    //   image: "/wcl.png",
+    //   video: "",
+    // },
+    // {
+    //   title: "Movie Watchlist App",
+    //   href: "https://movielisterbyhr.netlify.app/",
+    //   dates: "June 2023 - Present",
+    //   active: true,
+    //   description:
+    //     "An app that makes request to the tMDB API and gets movies and lets user add it to his watching list. Just simple practice website I made to learn React",
+    //   technologies: ["React", "Axios", "Context API"],
+    //   links: [
+    //     {
+    //       type: "Website",
+    //       href: "https://movielisterbyhr.netlify.app/",
+    //       icon: <Icons.globe className="size-3" />,
+    //     },
+    //     {
+    //       type: "Source",
+    //       href: "https://github.com/HiteshRohira/movie-list-maker/",
+    //       icon: <Icons.github className="size-3" />,
+    //     },
+    //   ],
+    //   image: "/movie-watchlist.png",
+    //   video: "",
+    // },
   ],
 } as const;
