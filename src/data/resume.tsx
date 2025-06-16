@@ -4,9 +4,9 @@ export const DATA = {
   name: "Hitesh Rohira",
   initials: "HR",
   url: "https://www.linkedin.com/in/hiteshrohira/",
-  description:
-    "A web developer passionate about building great UX experiences.",
-  summary: `Since graduating in 2021, I’ve been working as a software developer focusing on React, Next.js, and TypeScript. Over the past 4+ years, I’ve had the opportunity to help launch two products at Astra Security, including a SaaS dashboard where I worked on building a solid and scalable foundation.
+  description: "A web developer and a problem solver :)",
+  summary: `Since graduating in 2021, I’ve been working as a software developer focusing on React, Next.js, and TypeScript.
+  \n Over the past 4+ years, I’ve had the opportunity to help launch two products, one of them as a project lead.
   \n I love crafting intuitive and engaging user experiences and enjoy working in fast-paced environments where I can learn, grow, and make an impact.`,
   avatarUrl: "/me.png",
   skills: [
@@ -74,7 +74,7 @@ export const DATA = {
       start: "October 2022",
       end: "May 2025",
       description:
-        "Led end-to-end development of a product in React & NextJS from concept to launch, including architectural decisions.",
+        "Led end-to-end development of a product in React & NextJS from concept to launch. Read more [here](https://www.getastra.com/blog/astra-product/astra-orbitx/)",
     },
     {
       company: "Astra Security",
@@ -85,7 +85,7 @@ export const DATA = {
       logoUrl: "/astra.png",
       start: "February 2021",
       end: "October 2022",
-      description: `Played a key role in developing the initial version of the company's frontend dashboard, focusing on performance and usability.`,
+      description: `Played a key role in developing the initial version of the company's frontend dashboard.`,
     },
   ],
   education: [
