@@ -71,7 +71,7 @@ export const DATA = {
       start: "Feb 2021",
       end: "May 2025",
       description:
-        "Led end-to-end development of a product in React & Django from concept to launch. Read more [here](https://www.getastra.com/blog/astra-product/astra-orbitx/)",
+        "Led end-to-end development of a product in React & NextJS from concept to launch. Read more [here](https://www.getastra.com/blog/astra-product/astra-orbitx/)",
     },
     // {
     //   company: "Astra Security",
