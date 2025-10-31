@@ -62,6 +62,18 @@ export const DATA = {
 
   work: [
     {
+      company: "Fractal Analytics",
+      href: "https://fractal.ai/",
+      badges: [],
+      location: "Gurugram",
+      title: "Engineer",
+      logoUrl: "/fractal.jpeg",
+      start: "Sept 2025",
+      end: "Present",
+      description:
+        "Working as a full-stack developer, helping fortune 500 clients integrate AI into their products.",
+    },
+    {
       company: "Astra Security",
       href: "https://www.getastra.com/",
       badges: [],
@@ -71,7 +83,7 @@ export const DATA = {
       start: "Feb 2021",
       end: "May 2025",
       description:
-        "Led end-to-end development of a product in React & NextJS from concept to launch. Read more [here](https://www.getastra.com/blog/astra-product/astra-orbitx/)",
+        "Led end-to-end development of 2 products in React & NextJS from concept to launch. Read more [here](https://www.getastra.com/blog/astra-product/astra-orbitx/)",
     },
     // {
     //   company: "Astra Security",
