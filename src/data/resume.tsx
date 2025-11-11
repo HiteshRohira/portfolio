@@ -75,7 +75,7 @@ export const DATA = {
     },
     {
       company: "Astra Security",
-      href: "https://www.getastra.com/",
+      href: "#",
       badges: [],
       location: "Remote",
       title: "Software Development Engineer",
@@ -83,7 +83,7 @@ export const DATA = {
       start: "Feb 2021",
       end: "May 2025",
       description:
-        "Led end-to-end development of 2 products in React & NextJS from concept to launch. Read more [here](https://www.getastra.com/blog/astra-product/astra-orbitx/)",
+        "Led end-to-end development of 2 products in React & NextJS from concept to launch.",
     },
     // {
     //   company: "Astra Security",
