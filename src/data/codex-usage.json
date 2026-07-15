@@ -1,0 +1,36 @@
+{
+  "updatedAt": "2026-07-14T22:16:45Z",
+  "source": "CodexBar local session scan",
+  "weeks": [
+    {
+      "week": "2026-06-15",
+      "weekEnd": "2026-06-21",
+      "tokens": 1279699,
+      "partial": false
+    },
+    {
+      "week": "2026-06-22",
+      "weekEnd": "2026-06-28",
+      "tokens": 0,
+      "partial": false
+    },
+    {
+      "week": "2026-06-29",
+      "weekEnd": "2026-07-05",
+      "tokens": 80873313,
+      "partial": false
+    },
+    {
+      "week": "2026-07-06",
+      "weekEnd": "2026-07-12",
+      "tokens": 53649378,
+      "partial": false
+    },
+    {
+      "week": "2026-07-13",
+      "weekEnd": "2026-07-19",
+      "tokens": 47211249,
+      "partial": true
+    }
+  ]
+}

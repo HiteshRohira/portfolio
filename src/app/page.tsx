@@ -3,6 +3,7 @@ import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
+import { WeeklyTokenChart } from "@/components/weekly-token-chart";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
@@ -39,7 +40,22 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="about">
+      <section id="codex-usage" aria-labelledby="codex-usage-title">
+        <BlurFade delay={BLUR_FADE_DELAY * 2}>
+          <div className="mb-4 flex items-end justify-between gap-4">
+            <div>
+              <h2 id="codex-usage-title" className="text-xl font-bold">
+                Tokens, week by week
+              </h2>
+              <p className="mt-1 text-sm text-muted-foreground">
+                A live-ish footprint of the tokens I burn with Codex.
+              </p>
+            </div>
+          </div>
+          <WeeklyTokenChart />
+        </BlurFade>
+      </section>
+      {/*<section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <h2 className="text-xl font-bold">About</h2>
         </BlurFade>
@@ -48,7 +64,7 @@ export default function Page() {
             {DATA.summary}
           </Markdown>
         </BlurFade>
-      </section>
+      </section>*/}
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
