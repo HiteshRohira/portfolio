@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-17T21:35:50Z",
+  "updatedAt": "2026-07-22T21:44:01Z",
   "source": "CodexBar local session scan",
   "weeks": [
     {
@@ -29,7 +29,13 @@
     {
       "week": "2026-07-13",
       "weekEnd": "2026-07-19",
-      "tokens": 146369902,
+      "tokens": 169265417,
+      "partial": false
+    },
+    {
+      "week": "2026-07-20",
+      "weekEnd": "2026-07-26",
+      "tokens": 23082294,
       "partial": true
     }
   ]
