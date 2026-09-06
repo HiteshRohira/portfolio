@@ -108,6 +108,60 @@ export const DATA = {
     },
   ],
   projects: [
+    {
+      title: "Heple",
+      href: "https://www.npmjs.com/package/heple",
+      description: "A CLI that turns JSON plans into clean, self-contained HTML.",
+      technologies: ["TypeScript", "Node.js", "JSON Schema", "Vitest"],
+      links: [
+        {
+          type: "npm",
+          href: "https://www.npmjs.com/package/heple",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/HiteshRohira/heple",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+    },
+    {
+      title: "Farebi",
+      href: "https://farebi.vercel.app/",
+      description: "Party games with friends, with live multiplayer rooms and solo play.",
+      technologies: ["React", "TypeScript", "Convex", "Better Auth"],
+      links: [
+        {
+          type: "Play",
+          href: "https://farebi.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/HiteshRohira/farebi",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+    },
+    {
+      title: "OpenDraw",
+      href: "https://opendraw.vercel.app/",
+      description: "Excalidraw with multiple saved drawings, autosave, and local browser storage.",
+      technologies: ["React", "TypeScript", "Excalidraw", "IndexedDB"],
+      links: [
+        {
+          type: "Website",
+          href: "https://opendraw.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/HiteshRohira/opendraw",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+    },
     // {
     //   title: "OpenDraw",
     //   href: "https://opendraw.vercel.app/",

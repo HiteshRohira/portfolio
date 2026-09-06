@@ -46,7 +46,7 @@ export function ProjectCard({
         "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
       }
     >
-      <Link
+      {(image || video) && <Link
         href={href || "#"}
         className={cn("block cursor-pointer", className)}
       >
@@ -69,10 +69,12 @@ export function ProjectCard({
             className="h-40 w-full overflow-hidden object-cover object-top"
           />
         )}
-      </Link>
+      </Link>}
       <CardHeader className="px-2">
         <div className="space-y-1">
-          <CardTitle className="mt-1 text-base">{title}</CardTitle>
+          <CardTitle className="mt-1 text-base">
+            {href ? <Link href={href}>{title}</Link> : title}
+          </CardTitle>
           {/* <time className="font-sans text-xs">{dates}</time> */}
           <div className="hidden font-sans text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
