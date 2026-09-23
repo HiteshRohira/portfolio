@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-09-17T00:06:07Z",
+  "updatedAt": "2026-09-23T19:47:04Z",
   "source": "CodexBar local session scan",
   "weeks": [
     {
       "week": "2026-06-15",
       "weekEnd": "2026-06-21",
-      "tokens": 1279699,
+      "tokens": 1225002,
       "partial": false
     },
     {
@@ -17,19 +17,19 @@
     {
       "week": "2026-06-29",
       "weekEnd": "2026-07-05",
-      "tokens": 80873313,
+      "tokens": 80726504,
       "partial": false
     },
     {
       "week": "2026-07-06",
       "weekEnd": "2026-07-12",
-      "tokens": 53649378,
+      "tokens": 53599577,
       "partial": false
     },
     {
       "week": "2026-07-13",
       "weekEnd": "2026-07-19",
-      "tokens": 169265417,
+      "tokens": 157197558,
       "partial": false
     },
     {
@@ -41,7 +41,7 @@
     {
       "week": "2026-07-27",
       "weekEnd": "2026-08-02",
-      "tokens": 28281294,
+      "tokens": 23695905,
       "partial": false
     },
     {
@@ -83,7 +83,13 @@
     {
       "week": "2026-09-14",
       "weekEnd": "2026-09-20",
-      "tokens": 123965444,
+      "tokens": 246310174,
+      "partial": false
+    },
+    {
+      "week": "2026-09-21",
+      "weekEnd": "2026-09-27",
+      "tokens": 150200584,
       "partial": true
     }
   ]
