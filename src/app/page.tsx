@@ -4,6 +4,7 @@ import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { ToolsOfChoice } from "@/components/tools-of-choice";
+import { ListeningTo } from "@/components/listening-to";
 import { WeeklyTokenChart } from "@/components/weekly-token-chart";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -128,14 +129,19 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="tools" aria-label="Tools of choice">
+      <section id="tools" aria-labelledby="tools-title">
         <BlurFade delay={BLUR_FADE_DELAY * 11}>
           <ToolsOfChoice />
         </BlurFade>
       </section>
+      <section id="listening" aria-labelledby="listening-title">
+        <BlurFade delay={BLUR_FADE_DELAY * 12}>
+          <ListeningTo />
+        </BlurFade>
+      </section>
       <section id="projects" aria-labelledby="projects-title">
         <div className="space-y-4">
-          <BlurFade delay={BLUR_FADE_DELAY * 12}>
+          <BlurFade delay={BLUR_FADE_DELAY * 13}>
             <h2 id="projects-title" className="text-xl font-bold">
               Personal Projects
             </h2>
@@ -144,7 +150,7 @@ export default function Page() {
             {DATA.projects.map((project, id) => (
               <BlurFade
                 key={project.title}
-                delay={BLUR_FADE_DELAY * 13 + id * 0.05}
+                delay={BLUR_FADE_DELAY * 14 + id * 0.05}
               >
                 <ProjectCard
                   href={project.href}

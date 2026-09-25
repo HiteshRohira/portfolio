@@ -15,6 +15,7 @@ dist-ssr
 # Editor directories and files
 .vscode/*
 .next/*
+tsconfig.tsbuildinfo
 !.vscode/extensions.json
 .idea
 .DS_Store
@@ -23,3 +24,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.vercel
+.env*
