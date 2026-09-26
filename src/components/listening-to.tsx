@@ -50,9 +50,6 @@ export function ListeningTo() {
         <h2 id="listening-title" className="text-xl font-bold">
           Listening to
         </h2>
-        <p className="mt-1 text-sm text-muted-foreground">
-          Songs I can&apos;t get out of my head right now
-        </p>
       </div>
 
       <div aria-live="polite" aria-busy={!loaded}>

@@ -38,9 +38,6 @@ export function ToolsOfChoice() {
         <h2 id="tools-title" className="text-xl font-bold">
           Tools of choice
         </h2>
-        <p className="mt-1 text-sm text-muted-foreground">
-          The ones that feel like home.
-        </p>
       </div>
 
       <ul className="flex flex-wrap gap-x-5 gap-y-3">
