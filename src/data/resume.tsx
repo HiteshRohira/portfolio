@@ -127,6 +127,25 @@ export const DATA = {
       ],
     },
     {
+      title: "Heple Platform",
+      href: "https://heple.vercel.app/demo",
+      description:
+        "An interactive, read-only review workspace for implementation plans. Explore plan decisions, team feedback, and the agent handoff without signing in.",
+      technologies: ["React", "TypeScript", "Convex", "WorkOS", "Dodo Payments"],
+      links: [
+        {
+          type: "Live demo",
+          href: "https://heple.vercel.app/demo",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/HiteshRohira/heple-platform",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+    },
+    {
       title: "Farebi",
       href: "https://farebi.vercel.app/",
       description: "Party games with friends, with live multiplayer rooms and solo play.",
