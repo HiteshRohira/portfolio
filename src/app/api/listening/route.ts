@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
-import { addSong, videoIdFromMusicUrl, visibleSongs } from "@/lib/listening";
-import { hasListeningStore, readListeningSongs, writeListeningSongs } from "@/lib/listening-store";
+import { videoIdFromMusicUrl, visibleSongs, type ListeningSong } from "@/lib/listening";
+import { hasListeningStore, readListeningSongs, saveListeningSong } from "@/lib/listening-store";
 import { songFromVideoId } from "@/lib/youtube-music";
 
 export const runtime = "nodejs";
+export const maxDuration = 30;
 
 export async function GET() {
   try {
@@ -39,14 +40,19 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Share a YouTube Music song link" }, { status: 400 });
   }
 
+  let song: ListeningSong;
   try {
-    const song = await songFromVideoId(videoId);
-    const { songs, etag } = await readListeningSongs();
-    const updated = addSong(songs, song);
-    await writeListeningSongs(updated, etag);
+    song = await songFromVideoId(videoId);
+  } catch (error) {
+    console.error("Could not fetch listening song metadata", { videoId, error });
+    return NextResponse.json({ error: "YouTube song details are temporarily unavailable. Try sharing this song again." }, { status: 502 });
+  }
+
+  try {
+    const updated = await saveListeningSong(song);
     return NextResponse.json({ song, songs: updated });
   } catch (error) {
-    console.error("Could not add listening song", error);
-    return NextResponse.json({ error: "Could not add this song" }, { status: 502 });
+    console.error("Could not save listening song", { videoId, error });
+    return NextResponse.json({ error: "Could not save this song right now. Try sharing it again." }, { status: 503 });
   }
 }

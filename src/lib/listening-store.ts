@@ -1,5 +1,5 @@
-import { get, put } from "@vercel/blob";
-import { initialListeningSongs, type ListeningSong } from "@/lib/listening";
+import { BlobPreconditionFailedError, get, put } from "@vercel/blob";
+import { addSong, initialListeningSongs, type ListeningSong } from "@/lib/listening";
 
 const BLOB_PATH = "listening-to.json";
 
@@ -35,4 +35,18 @@ export async function writeListeningSongs(songs: ListeningSong[], etag?: string)
     contentType: "application/json",
     cacheControlMaxAge: 60,
   });
+}
+
+export async function saveListeningSong(song: ListeningSong) {
+  for (let attempt = 0; ; attempt++) {
+    const { songs, etag } = await readListeningSongs();
+    const updated = addSong(songs, song);
+    try {
+      await writeListeningSongs(updated, etag);
+      return updated;
+    } catch (error) {
+      // Re-read and merge when another Shortcut submission won the write.
+      if (!(error instanceof BlobPreconditionFailedError) || attempt >= 2) throw error;
+    }
+  }
 }

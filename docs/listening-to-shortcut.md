@@ -21,4 +21,6 @@ For this portfolio, the Blob store and production secret are already configured.
 
 In YouTube Music, open a song, tap **Share**, and choose **Listening to**. The Shortcut sends only the song link. The portfolio fetches the title, artist, album art, and album name from YouTube Music and saves the five-song list. Song submissions update Blob without triggering a new deployment.
 
+If YouTube Music rejects or times out on the metadata request, the endpoint falls back to YouTube's public oEmbed metadata. This preserves the song title, channel artist (without the ` - Topic` suffix), and thumbnail; album details and additional artist credits may be unavailable in this fallback. Conflicting Blob updates are re-read and merged up to three times. If both metadata sources fail, the Shortcut receives a retry message and the saved list stays unchanged.
+
 The endpoint only accepts `https://music.youtube.com/watch?v=...` song links. If a share-sheet item arrives as text instead of a URL on your iOS version, set the shortcut input types to **URLs and Text**, then use **Get URLs from Input** before the request.

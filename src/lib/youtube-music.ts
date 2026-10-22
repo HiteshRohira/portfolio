@@ -19,7 +19,7 @@ type MusicTrack = {
   thumbnail?: { thumbnails?: { url?: string; width?: number }[] };
 };
 
-function getTrack(payload: unknown): MusicTrack | null {
+function getTrack(payload: unknown, videoId: string): MusicTrack | null {
   const data = payload as {
     contents?: { singleColumnMusicWatchNextResultsRenderer?: {
       tabbedRenderer?: { watchNextTabbedResultsRenderer?: { tabs?: unknown[] } };
@@ -41,7 +41,7 @@ function getTrack(payload: unknown): MusicTrack | null {
     } };
     const track = entry?.playlistPanelVideoRenderer ?? entry?.playlistPanelVideoWrapperRenderer
       ?.primaryRenderer?.playlistPanelVideoRenderer;
-    if (track?.videoId) return track;
+    if (track?.videoId === videoId) return track;
   }
 
   return null;
@@ -52,7 +52,7 @@ function isMusicArtist(run: MusicRun) {
     ?.browseEndpointContextMusicConfig?.pageType === "MUSIC_PAGE_TYPE_ARTIST";
 }
 
-export async function songFromVideoId(videoId: string): Promise<ListeningSong> {
+async function musicDetails(videoId: string) {
   const clientVersion = `1.${new Date().toISOString().slice(0, 10).replaceAll("-", "")}.01.00`;
   const response = await fetch("https://music.youtube.com/youtubei/v1/next?prettyPrint=false", {
     method: "POST",
@@ -74,14 +74,14 @@ export async function songFromVideoId(videoId: string): Promise<ListeningSong> {
         },
       },
     }),
-    signal: AbortSignal.timeout(10000),
+    signal: AbortSignal.timeout(5000),
     cache: "no-store",
   });
 
-  if (!response.ok) throw new Error("YouTube Music metadata request failed");
+  if (!response.ok) throw new Error(`YouTube Music metadata request failed (${response.status})`);
 
-  const track = getTrack(await response.json());
-  if (!track || track.videoId !== videoId) throw new Error("This link is not a playable YouTube Music song");
+  const track = getTrack(await response.json(), videoId);
+  if (!track) throw new Error("This link is not a playable YouTube Music song");
 
   const title = track.title?.runs?.map((run) => run.text ?? "").join("").trim();
   const runs = track.longBylineText?.runs ?? [];
@@ -94,13 +94,48 @@ export async function songFromVideoId(videoId: string): Promise<ListeningSong> {
     throw new Error("YouTube Music did not return complete song details");
   }
 
+  return { title, artist: artists.join(", "), album, artworkUrl };
+}
+
+async function publicDetails(videoId: string) {
+  // YouTube Music's internal API can reject datacenter requests. oEmbed is a
+  // separate public metadata endpoint and does not require playback access.
+  const url = new URL("https://www.youtube.com/oembed");
+  url.searchParams.set("url", `https://www.youtube.com/watch?v=${videoId}`);
+  url.searchParams.set("format", "json");
+  const response = await fetch(url, {
+    signal: AbortSignal.timeout(5000),
+    cache: "no-store",
+  });
+  if (!response.ok) throw new Error(`YouTube public metadata request failed (${response.status})`);
+
+  const data = await response.json() as {
+    title?: unknown; author_name?: unknown; thumbnail_url?: unknown;
+  };
+  const title = typeof data.title === "string" ? data.title.trim() : "";
+  const artist = typeof data.author_name === "string"
+    ? data.author_name.replace(/ - Topic$/, "").trim() : "";
+  const artworkUrl = typeof data.thumbnail_url === "string" ? data.thumbnail_url.trim() : "";
+  if (!title || !artist || !artworkUrl.startsWith("https://")) {
+    throw new Error("YouTube did not return complete song details");
+  }
+
+  return { title, artist, album: null, artworkUrl };
+}
+
+export async function songFromVideoId(videoId: string): Promise<ListeningSong> {
+  let details;
+  try {
+    details = await musicDetails(videoId);
+  } catch (error) {
+    console.warn("YouTube Music metadata unavailable; trying public metadata", { videoId, error });
+    details = await publicDetails(videoId);
+  }
+
   const sharedAt = new Date();
   return {
+    ...details,
     videoId,
-    title,
-    artist: artists.join(", "),
-    album,
-    artworkUrl,
     url: `https://music.youtube.com/watch?v=${videoId}`,
     sharedAt: sharedAt.toISOString(),
     expiresAt: new Date(sharedAt.getTime() + SONG_LIFETIME_MS).toISOString(),

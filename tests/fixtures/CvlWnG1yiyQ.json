@@ -1,0 +1,109 @@
+{
+  "contents": {
+    "singleColumnMusicWatchNextResultsRenderer": {
+      "tabbedRenderer": {
+        "watchNextTabbedResultsRenderer": {
+          "tabs": [
+            {
+              "tabRenderer": {
+                "content": {
+                  "musicQueueRenderer": {
+                    "content": {
+                      "playlistPanelRenderer": {
+                        "contents": [
+                          {
+                            "playlistPanelVideoRenderer": {
+                              "videoId": "CvlWnG1yiyQ",
+                              "title": {
+                                "runs": [
+                                  {
+                                    "text": "Nafrat"
+                                  }
+                                ]
+                              },
+                              "longBylineText": {
+                                "runs": [
+                                  {
+                                    "text": "Darshan Raval",
+                                    "navigationEndpoint": {
+                                      "browseEndpoint": {
+                                        "browseEndpointContextSupportedConfigs": {
+                                          "browseEndpointContextMusicConfig": {
+                                            "pageType": "MUSIC_PAGE_TYPE_ARTIST"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "text": " • "
+                                  },
+                                  {
+                                    "text": "I Loved You",
+                                    "navigationEndpoint": {
+                                      "browseEndpoint": {
+                                        "browseEndpointContextSupportedConfigs": {
+                                          "browseEndpointContextMusicConfig": {
+                                            "pageType": "MUSIC_PAGE_TYPE_ALBUM"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "text": " • "
+                                  },
+                                  {
+                                    "text": "2025"
+                                  }
+                                ]
+                              },
+                              "thumbnail": {
+                                "thumbnails": [
+                                  {
+                                    "url": "https://yt3.googleusercontent.com/4v25xPRwy1vH---p4dScFk8hgiTVuMkqz_U5ztdp1ezv021IfZSHhf6n8PBeZW8frHG9hcCXlb4OtJBP=w60-h60-l90-rj",
+                                    "width": 60,
+                                    "height": 60
+                                  },
+                                  {
+                                    "url": "https://yt3.googleusercontent.com/4v25xPRwy1vH---p4dScFk8hgiTVuMkqz_U5ztdp1ezv021IfZSHhf6n8PBeZW8frHG9hcCXlb4OtJBP=w120-h120-l90-rj",
+                                    "width": 120,
+                                    "height": 120
+                                  },
+                                  {
+                                    "url": "https://yt3.googleusercontent.com/4v25xPRwy1vH---p4dScFk8hgiTVuMkqz_U5ztdp1ezv021IfZSHhf6n8PBeZW8frHG9hcCXlb4OtJBP=w180-h180-l90-rj",
+                                    "width": 180,
+                                    "height": 180
+                                  },
+                                  {
+                                    "url": "https://yt3.googleusercontent.com/4v25xPRwy1vH---p4dScFk8hgiTVuMkqz_U5ztdp1ezv021IfZSHhf6n8PBeZW8frHG9hcCXlb4OtJBP=w226-h226-l90-rj",
+                                    "width": 226,
+                                    "height": 226
+                                  },
+                                  {
+                                    "url": "https://yt3.googleusercontent.com/4v25xPRwy1vH---p4dScFk8hgiTVuMkqz_U5ztdp1ezv021IfZSHhf6n8PBeZW8frHG9hcCXlb4OtJBP=w302-h302-l90-rj",
+                                    "width": 302,
+                                    "height": 302
+                                  },
+                                  {
+                                    "url": "https://yt3.googleusercontent.com/4v25xPRwy1vH---p4dScFk8hgiTVuMkqz_U5ztdp1ezv021IfZSHhf6n8PBeZW8frHG9hcCXlb4OtJBP=w544-h544-l90-rj",
+                                    "width": 544,
+                                    "height": 544
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

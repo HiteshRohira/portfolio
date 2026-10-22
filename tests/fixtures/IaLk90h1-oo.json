@@ -1,0 +1,124 @@
+{
+  "contents": {
+    "singleColumnMusicWatchNextResultsRenderer": {
+      "tabbedRenderer": {
+        "watchNextTabbedResultsRenderer": {
+          "tabs": [
+            {
+              "tabRenderer": {
+                "content": {
+                  "musicQueueRenderer": {
+                    "content": {
+                      "playlistPanelRenderer": {
+                        "contents": [
+                          {
+                            "playlistPanelVideoRenderer": {
+                              "videoId": "IaLk90h1-oo",
+                              "title": {
+                                "runs": [
+                                  {
+                                    "text": "Barsaat"
+                                  }
+                                ]
+                              },
+                              "longBylineText": {
+                                "runs": [
+                                  {
+                                    "text": "Banjaare",
+                                    "navigationEndpoint": {
+                                      "browseEndpoint": {
+                                        "browseEndpointContextSupportedConfigs": {
+                                          "browseEndpointContextMusicConfig": {
+                                            "pageType": "MUSIC_PAGE_TYPE_ARTIST"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "text": " & "
+                                  },
+                                  {
+                                    "text": "Roni",
+                                    "navigationEndpoint": {
+                                      "browseEndpoint": {
+                                        "browseEndpointContextSupportedConfigs": {
+                                          "browseEndpointContextMusicConfig": {
+                                            "pageType": "MUSIC_PAGE_TYPE_ARTIST"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "text": " • "
+                                  },
+                                  {
+                                    "text": "Barsaat",
+                                    "navigationEndpoint": {
+                                      "browseEndpoint": {
+                                        "browseEndpointContextSupportedConfigs": {
+                                          "browseEndpointContextMusicConfig": {
+                                            "pageType": "MUSIC_PAGE_TYPE_ALBUM"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "text": " • "
+                                  },
+                                  {
+                                    "text": "2026"
+                                  }
+                                ]
+                              },
+                              "thumbnail": {
+                                "thumbnails": [
+                                  {
+                                    "url": "https://yt3.googleusercontent.com/7_06KmE85Uk8mngpR0_lw_zf9qqmsN9rW1xTF57d9DegptGKJ9Qw_r6Xdi26OnXy7NxdiWbPqusEQ2W2xA=w60-h60-l90-rj",
+                                    "width": 60,
+                                    "height": 60
+                                  },
+                                  {
+                                    "url": "https://yt3.googleusercontent.com/7_06KmE85Uk8mngpR0_lw_zf9qqmsN9rW1xTF57d9DegptGKJ9Qw_r6Xdi26OnXy7NxdiWbPqusEQ2W2xA=w120-h120-l90-rj",
+                                    "width": 120,
+                                    "height": 120
+                                  },
+                                  {
+                                    "url": "https://yt3.googleusercontent.com/7_06KmE85Uk8mngpR0_lw_zf9qqmsN9rW1xTF57d9DegptGKJ9Qw_r6Xdi26OnXy7NxdiWbPqusEQ2W2xA=w180-h180-l90-rj",
+                                    "width": 180,
+                                    "height": 180
+                                  },
+                                  {
+                                    "url": "https://yt3.googleusercontent.com/7_06KmE85Uk8mngpR0_lw_zf9qqmsN9rW1xTF57d9DegptGKJ9Qw_r6Xdi26OnXy7NxdiWbPqusEQ2W2xA=w226-h226-l90-rj",
+                                    "width": 226,
+                                    "height": 226
+                                  },
+                                  {
+                                    "url": "https://yt3.googleusercontent.com/7_06KmE85Uk8mngpR0_lw_zf9qqmsN9rW1xTF57d9DegptGKJ9Qw_r6Xdi26OnXy7NxdiWbPqusEQ2W2xA=w302-h302-l90-rj",
+                                    "width": 302,
+                                    "height": 302
+                                  },
+                                  {
+                                    "url": "https://yt3.googleusercontent.com/7_06KmE85Uk8mngpR0_lw_zf9qqmsN9rW1xTF57d9DegptGKJ9Qw_r6Xdi26OnXy7NxdiWbPqusEQ2W2xA=w544-h544-l90-rj",
+                                    "width": 544,
+                                    "height": 544
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
