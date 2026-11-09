@@ -3,7 +3,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
+import { cn, formatTenure } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ChevronRightIcon } from "lucide-react";
 import Link from "next/link";
@@ -18,6 +18,9 @@ interface ResumeCardProps {
   href?: string;
   badges?: readonly string[];
   period: string;
+  /** Start/end as written in the data ("Sept 2025", "Present"), used for the tenure line. */
+  start?: string;
+  end?: string;
   description?: string;
 }
 export const ResumeCard = ({
@@ -28,9 +31,20 @@ export const ResumeCard = ({
   href,
   badges,
   period,
+  start,
+  end,
   description,
 }: ResumeCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
+  const isOngoing = !end || /^present$/i.test(end);
+  // Ongoing roles depend on today's date, so compute them after mount: the page is
+  // statically rendered and the build date would otherwise go stale.
+  const [tenure, setTenure] = React.useState<string | null>(() =>
+    start && !isOngoing ? formatTenure(start, end!) : null,
+  );
+  React.useEffect(() => {
+    if (start && isOngoing) setTenure(formatTenure(start, end ?? "Present"));
+  }, [start, end, isOngoing]);
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     if (description) {
@@ -82,7 +96,14 @@ export const ResumeCard = ({
               {period}
             </div>
           </div>
-          {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
+          <div className="flex items-start justify-between gap-x-2">
+            {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
+            {start && (
+              <div className="ml-auto min-h-4 shrink-0 text-right text-xs tabular-nums text-muted-foreground">
+                {tenure}
+              </div>
+            )}
+          </div>
         </CardHeader>
         {description && (
           <motion.div

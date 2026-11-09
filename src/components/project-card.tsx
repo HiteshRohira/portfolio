@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -21,7 +22,6 @@ interface Props {
   image?: string;
   video?: string;
   links?: readonly {
-    icon: React.ReactNode;
     type: string;
     href: string;
   }[];
@@ -63,10 +63,11 @@ export function ProjectCard({
         {image && (
           <Image
             src={image}
-            alt={title}
-            width={500}
-            height={300}
-            className="h-40 w-full overflow-hidden object-cover object-top"
+            alt={`${title} poster`}
+            width={768}
+            height={512}
+            sizes="(min-width: 640px) 336px, 100vw"
+            className="aspect-[3/2] w-full object-cover"
           />
         )}
       </Link>}
@@ -99,20 +100,25 @@ export function ProjectCard({
           </div>
         )}
       </CardContent>
-      <CardFooter className="px-2 pb-2">
-        {links && links.length > 0 && (
-          <div className="flex flex-row flex-wrap items-start gap-1">
-            {links?.map((link, idx) => (
-              <Link href={link?.href} key={idx} target="_blank">
-                <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
-                  {link.icon}
-                  {link.type}
-                </Badge>
-              </Link>
-            ))}
-          </div>
-        )}
-      </CardFooter>
+      {links && links.length > 0 && (
+        <CardFooter className="justify-end gap-3 px-2 pb-2 pt-3">
+          {links.map((link) => (
+            <Link
+              href={link.href}
+              key={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group/link inline-flex items-center gap-0.5 rounded-sm text-xs text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            >
+              {link.type}
+              <ArrowUpRight
+                aria-hidden="true"
+                className="size-3 transition-transform group-hover/link:-translate-y-px group-hover/link:translate-x-px"
+              />
+            </Link>
+          ))}
+        </CardFooter>
+      )}
     </Card>
   );
 }

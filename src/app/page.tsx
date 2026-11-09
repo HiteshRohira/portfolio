@@ -5,14 +5,18 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { ToolsOfChoice } from "@/components/tools-of-choice";
 import { ListeningTo } from "@/components/listening-to";
-import { WeeklyTokenChart } from "@/components/weekly-token-chart";
+import { AiUsageChart } from "@/components/ai-usage-chart";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { DATA } from "@/data/resume";
+import { DATA, FEATURED_PROJECTS } from "@/data/resume";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
+
+const featuredProjects = DATA.projects.filter((project) =>
+  (FEATURED_PROJECTS as readonly string[]).includes(project.title),
+);
 
 export default function Page() {
   return (
@@ -42,19 +46,19 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="codex-usage" aria-labelledby="codex-usage-title">
+      <section id="ai-usage" aria-labelledby="ai-usage-title">
         <BlurFade delay={BLUR_FADE_DELAY * 2}>
           <div className="mb-4 flex items-end justify-between gap-4">
             <div>
-              <h2 id="codex-usage-title" className="text-xl font-bold">
-                Tokens, week by week
+              <h2 id="ai-usage-title" className="text-xl font-bold">
+                Tokens, day by day
               </h2>
               <p className="mt-1 text-sm text-muted-foreground">
-                A live-ish footprint of the tokens I burn with Codex.
+                A live-ish footprint of the tokens I burn across Codex, Claude Code and OpenCode.
               </p>
             </div>
           </div>
-          <WeeklyTokenChart />
+          <AiUsageChart />
         </BlurFade>
       </section>
       {/*<section id="about">
@@ -86,6 +90,8 @@ export default function Page() {
                 href={work.href}
                 badges={work.badges}
                 period={`${work.start} - ${work.end ?? "Present"}`}
+                start={work.start}
+                end={work.end ?? "Present"}
                 description={work.description}
               />
             </BlurFade>
@@ -100,21 +106,36 @@ export default function Page() {
             </h2>
           </BlurFade>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {DATA.projects.map((project, id) => (
+            {featuredProjects.map((project, id) => (
               <BlurFade
                 key={project.title}
                 delay={BLUR_FADE_DELAY * 8 + id * 0.05}
               >
                 <ProjectCard
                   href={project.href}
-                  key={project.title}
                   title={project.title}
                   description={project.description}
                   tags={project.technologies}
                   links={project.links}
+                  image={project.image}
                 />
               </BlurFade>
             ))}
+            <BlurFade delay={BLUR_FADE_DELAY * 8 + featuredProjects.length * 0.05}>
+              <Link
+                href="/projects"
+                className="group flex h-full min-h-40 flex-col items-center justify-center gap-2 rounded-lg border border-dashed p-6 text-center transition-colors hover:bg-muted/50"
+              >
+                <span className="text-sm font-medium">View all projects</span>
+                <span className="text-xs text-muted-foreground">
+                  {DATA.projects.length} projects
+                </span>
+                <ArrowRight
+                  aria-hidden="true"
+                  className="size-4 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:text-foreground"
+                />
+              </Link>
+            </BlurFade>
           </div>
         </div>
       </section>
@@ -126,7 +147,9 @@ export default function Page() {
           <div className="flex flex-wrap gap-1">
             {DATA.skills.map((skill, id) => (
               <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
+                <span className="inline-flex items-center rounded-md border border-border/70 px-2 py-1 text-[11px] font-medium text-muted-foreground">
+                  {skill}
+                </span>
               </BlurFade>
             ))}
           </div>
@@ -137,11 +160,7 @@ export default function Page() {
           <ToolsOfChoice />
         </BlurFade>
       </section>
-      <section id="listening" aria-labelledby="listening-title">
-        <BlurFade delay={BLUR_FADE_DELAY * 12}>
-          <ListeningTo />
-        </BlurFade>
-      </section>
+      <ListeningTo delay={BLUR_FADE_DELAY * 12} />
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>

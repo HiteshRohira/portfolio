@@ -1,0 +1,204 @@
+{
+  "updatedAt": "2026-11-09T21:16:17.511Z",
+  "source": "T3 Code usage scan (Codex, Claude Code) + OpenCode local store",
+  "from": "2026-10-12",
+  "to": "2026-11-10",
+  "totalTokens": 4369101305,
+  "totalSessions": 271,
+  "providers": {
+    "codex": {
+      "tokens": 1959319756,
+      "sessions": 155
+    },
+    "claude": {
+      "tokens": 2252576354,
+      "sessions": 76
+    },
+    "opencode": {
+      "tokens": 157205195,
+      "sessions": 40
+    }
+  },
+  "days": [
+    {
+      "date": "2026-10-12",
+      "codex": 5564822,
+      "claude": 19837503,
+      "opencode": 0
+    },
+    {
+      "date": "2026-10-13",
+      "codex": 115772486,
+      "claude": 164927358,
+      "opencode": 0
+    },
+    {
+      "date": "2026-10-14",
+      "codex": 0,
+      "claude": 34365839,
+      "opencode": 0
+    },
+    {
+      "date": "2026-10-15",
+      "codex": 13756485,
+      "claude": 36493831,
+      "opencode": 0
+    },
+    {
+      "date": "2026-10-16",
+      "codex": 29157371,
+      "claude": 59978182,
+      "opencode": 0
+    },
+    {
+      "date": "2026-10-17",
+      "codex": 42578113,
+      "claude": 106290414,
+      "opencode": 0
+    },
+    {
+      "date": "2026-10-18",
+      "codex": 31928800,
+      "claude": 0,
+      "opencode": 0
+    },
+    {
+      "date": "2026-10-19",
+      "codex": 151108175,
+      "claude": 0,
+      "opencode": 0
+    },
+    {
+      "date": "2026-10-20",
+      "codex": 0,
+      "claude": 0,
+      "opencode": 0
+    },
+    {
+      "date": "2026-10-21",
+      "codex": 35996487,
+      "claude": 35604187,
+      "opencode": 0
+    },
+    {
+      "date": "2026-10-22",
+      "codex": 158132975,
+      "claude": 179910567,
+      "opencode": 11703211
+    },
+    {
+      "date": "2026-10-23",
+      "codex": 184756082,
+      "claude": 168162460,
+      "opencode": 42307881
+    },
+    {
+      "date": "2026-10-24",
+      "codex": 170490551,
+      "claude": 154982709,
+      "opencode": 4953188
+    },
+    {
+      "date": "2026-10-25",
+      "codex": 164233283,
+      "claude": 167025832,
+      "opencode": 0
+    },
+    {
+      "date": "2026-10-26",
+      "codex": 59299645,
+      "claude": 13183936,
+      "opencode": 13761511
+    },
+    {
+      "date": "2026-10-27",
+      "codex": 159327647,
+      "claude": 167266776,
+      "opencode": 23154761
+    },
+    {
+      "date": "2026-10-28",
+      "codex": 131270217,
+      "claude": 195974101,
+      "opencode": 14053983
+    },
+    {
+      "date": "2026-10-29",
+      "codex": 190145598,
+      "claude": 119725390,
+      "opencode": 15246662
+    },
+    {
+      "date": "2026-10-30",
+      "codex": 64354242,
+      "claude": 95069421,
+      "opencode": 2529114
+    },
+    {
+      "date": "2026-10-31",
+      "codex": 80220133,
+      "claude": 16378006,
+      "opencode": 3651422
+    },
+    {
+      "date": "2026-11-01",
+      "codex": 0,
+      "claude": 4352065,
+      "opencode": 0
+    },
+    {
+      "date": "2026-11-02",
+      "codex": 5477225,
+      "claude": 8983288,
+      "opencode": 9574739
+    },
+    {
+      "date": "2026-11-03",
+      "codex": 36875896,
+      "claude": 17957095,
+      "opencode": 0
+    },
+    {
+      "date": "2026-11-04",
+      "codex": 3520787,
+      "claude": 761562,
+      "opencode": 0
+    },
+    {
+      "date": "2026-11-05",
+      "codex": 16737479,
+      "claude": 27334565,
+      "opencode": 0
+    },
+    {
+      "date": "2026-11-06",
+      "codex": 3051801,
+      "claude": 80484901,
+      "opencode": 0
+    },
+    {
+      "date": "2026-11-07",
+      "codex": 51100373,
+      "claude": 284628395,
+      "opencode": 16268723
+    },
+    {
+      "date": "2026-11-08",
+      "codex": 46868979,
+      "claude": 80120601,
+      "opencode": 0
+    },
+    {
+      "date": "2026-11-09",
+      "codex": 205021,
+      "claude": 130546,
+      "opencode": 0
+    },
+    {
+      "date": "2026-11-10",
+      "codex": 7389083,
+      "claude": 12646824,
+      "opencode": 0
+    }
+  ]
+}

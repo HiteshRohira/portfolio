@@ -109,163 +109,118 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Heple",
-      href: "https://www.npmjs.com/package/heple",
-      description: "A CLI that turns JSON plans into clean, self-contained HTML.",
-      technologies: ["TypeScript", "Node.js", "JSON Schema", "Vitest"],
+      title: "ReVLC",
+      href: "https://revlc.vercel.app",
+      description:
+        "A modern, lightweight media player built on libVLC, working toward full VLC feature parity with a cleaner, faster UI. Alpha builds available.",
+      technologies: ["Rust", "Tauri", "Svelte"],
+      image: "/projects/revlc.png",
       links: [
         {
-          type: "npm",
-          href: "https://www.npmjs.com/package/heple",
-          icon: <Icons.globe className="size-3" />,
+          type: "Website",
+          href: "https://revlc.vercel.app",
         },
         {
           type: "Source",
-          href: "https://github.com/HiteshRohira/heple",
-          icon: <Icons.github className="size-3" />,
+          href: "https://github.com/HiteshRohira/ReVLC",
         },
       ],
     },
     {
-      title: "Heple Platform",
-      href: "https://heple.vercel.app/demo",
+      title: "Mirage",
+      href: "https://github.com/HiteshRohira/Mirage",
       description:
-        "An interactive, read-only review workspace for implementation plans. Explore plan decisions, team feedback, and the agent handoff without signing in.",
-      technologies: ["React", "TypeScript", "Convex", "WorkOS", "Dodo Payments"],
+        "A fast, quiet Android TV home screen with AirPlay built in. iPhone and Mac can mirror, play video and stream music to the TV, and any phone becomes a remote. No ads, accounts or telemetry.",
+      technologies: ["Java", "Kotlin", "C"],
+      image: "/projects/mirage.png",
       links: [
         {
-          type: "Live demo",
-          href: "https://heple.vercel.app/demo",
-          icon: <Icons.globe className="size-3" />,
+          type: "Download",
+          href: "https://github.com/HiteshRohira/Mirage/releases/latest",
         },
         {
           type: "Source",
-          href: "https://github.com/HiteshRohira/heple-platform",
-          icon: <Icons.github className="size-3" />,
+          href: "https://github.com/HiteshRohira/Mirage",
+        },
+      ],
+    },
+    {
+      title: "Mettro",
+      href: "https://github.com/HiteshRohira/mettro",
+      description:
+        "A fast, modern metro companion for iOS, starting with Delhi Metro. Save a trip once, then take it in one tap.",
+      technologies: ["React Native", "Expo", "TypeScript"],
+      image: "/projects/mettro.png",
+      links: [
+        {
+          type: "Download",
+          href: "https://github.com/HiteshRohira/mettro/releases/latest",
+        },
+        {
+          type: "Source",
+          href: "https://github.com/HiteshRohira/mettro",
         },
       ],
     },
     {
       title: "Farebi",
       href: "https://farebi.vercel.app/",
-      description: "Party games with friends, with live multiplayer rooms and solo play.",
+      description:
+        "Realtime party games for solo play or 3–20 player rooms: Who's That?, Truth or Lie, and Impostor. Share a six-character code and play.",
       technologies: ["React", "TypeScript", "Convex", "Better Auth"],
+      image: "/projects/farebi.png",
       links: [
         {
           type: "Play",
           href: "https://farebi.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
         },
         {
           type: "Source",
           href: "https://github.com/HiteshRohira/farebi",
-          icon: <Icons.github className="size-3" />,
+        },
+      ],
+    },
+    {
+      title: "Heple",
+      href: "https://www.npmjs.com/package/heple",
+      description:
+        "A CLI that turns a structured JSON plan into a well-designed, self-contained HTML page, so coding agents produce good-looking plans with far fewer tokens.",
+      technologies: ["TypeScript", "Node.js", "JSON Schema", "Vitest"],
+      image: "/projects/heple.png",
+      links: [
+        {
+          type: "npm",
+          href: "https://www.npmjs.com/package/heple",
+        },
+        {
+          type: "Platform demo",
+          href: "https://heple.vercel.app/demo",
+        },
+        {
+          type: "Source",
+          href: "https://github.com/HiteshRohira/heple",
         },
       ],
     },
     {
       title: "OpenDraw",
       href: "https://opendraw.vercel.app/",
-      description: "Excalidraw with multiple saved drawings, autosave, and local browser storage.",
+      description:
+        "Excalidraw with multiple saved drawings, autosave, and local browser storage.",
       technologies: ["React", "TypeScript", "Excalidraw", "IndexedDB"],
+      image: "/projects/opendraw.png",
       links: [
         {
           type: "Website",
           href: "https://opendraw.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
         },
         {
           type: "Source",
           href: "https://github.com/HiteshRohira/opendraw",
-          icon: <Icons.github className="size-3" />,
         },
       ],
     },
-    // {
-    //   title: "OpenDraw",
-    //   href: "https://opendraw.vercel.app/",
-    //   dates: "Dec 2025 - Jan 2025",
-    //   active: true,
-    //   description: "Opensource Excalidraw with local file management.",
-    //   technologies: ["React", "Vite", "Typescript", "TailwindCSS", "ShadCn"],
-    //   links: [
-    //     {
-    //       type: "Website",
-    //       href: "https://opendraw.vercel.app/",
-    //       icon: <Icons.globe className="size-3" />,
-    //     },
-    //     {
-    //       type: "Source",
-    //       href: "https://github.com/HiteshRohira/opendraw",
-    //       icon: <Icons.github className="size-3" />,
-    //     },
-    //   ],
-    //   image: "/opendraw.png",
-    //   video: "",
-    // },
-    // {
-    //   title: "Django Tasks App",
-    //   href: "https://github.com/HiteshRohira/django-todo-app",
-    //   dates: "Dec 2025 - Jan 2025",
-    //   active: true,
-    //   description:
-    //     "A backend-only Django project demonstrating CRUD functionality with a Task model. Includes endpoints for creating, reading, updating, and deleting tasks, with a simple SQLite database.",
-    //   technologies: ["Django", "Python", "HTML"],
-    //   links: [
-    //     {
-    //       type: "Source",
-    //       href: "https://github.com/HiteshRohira/django-todo-app",
-    //       icon: <Icons.github className="size-3" />,
-    //     },
-    //   ],
-    //   image: "/django-tasks-app.png",
-    //   video: "",
-    // },
-    // {
-    //   title: "Whatsapp Chat Opener",
-    //   href: "https://wcl.vercel.app/",
-    //   dates: "Jan 2024 - Feb 2024",
-    //   active: true,
-    //   description:
-    //     "Before whatsapp had this native functionality, I felt the need for a tool to open a whatsapp chat for a new number",
-    //   technologies: ["Next.js", "React", "TailwindCSS"],
-    //   links: [
-    //     {
-    //       type: "Website",
-    //       href: "https://wcl.vercel.app/",
-    //       icon: <Icons.globe className="size-3" />,
-    //     },
-    //     {
-    //       type: "Source",
-    //       href: "https://github.com/HiteshRohira/whats-chat-linker/",
-    //       icon: <Icons.github className="size-3" />,
-    //     },
-    //   ],
-    //   image: "/wcl.png",
-    //   video: "",
-    // },
-    // {
-    //   title: "Movie Watchlist App",
-    //   href: "https://movielisterbyhr.netlify.app/",
-    //   dates: "June 2023 - Present",
-    //   active: true,
-    //   description:
-    //     "An app that makes request to the tMDB API and gets movies and lets user add it to his watching list. Just simple practice website I made to learn React",
-    //   technologies: ["React", "Axios", "Context API"],
-    //   links: [
-    //     {
-    //       type: "Website",
-    //       href: "https://movielisterbyhr.netlify.app/",
-    //       icon: <Icons.globe className="size-3" />,
-    //     },
-    //     {
-    //       type: "Source",
-    //       href: "https://github.com/HiteshRohira/movie-list-maker/",
-    //       icon: <Icons.github className="size-3" />,
-    //     },
-    //   ],
-    //   image: "/movie-watchlist.png",
-    //   video: "",
-    // },
   ],
 } as const;
+
+export const FEATURED_PROJECTS = ["ReVLC", "Mirage", "Mettro"] as const;
