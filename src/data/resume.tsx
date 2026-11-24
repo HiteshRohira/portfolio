@@ -127,6 +127,20 @@ export const DATA = {
       ],
     },
     {
+      title: "Loadside",
+      href: "https://github.com/HiteshRohira/loadside",
+      description:
+        "Sideload iPhone apps from a Mac with your own Apple ID, no Xcode, and keep them signed: a background service re-signs them over Wi-Fi before they expire. Guided setup, menu bar panel, tweak injection and a CLI.",
+      technologies: ["Rust", "Swift", "SwiftUI"],
+      image: "/projects/loadside.png",
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/HiteshRohira/loadside",
+        },
+      ],
+    },
+    {
       title: "Mirage",
       href: "https://github.com/HiteshRohira/Mirage",
       description:
