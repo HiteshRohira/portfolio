@@ -237,4 +237,4 @@ export const DATA = {
   ],
 } as const;
 
-export const FEATURED_PROJECTS = ["ReVLC", "Mirage", "Mettro"] as const;
+export const FEATURED_PROJECTS = ["ReVLC", "Loadside", "Mirage", "Mettro"] as const;

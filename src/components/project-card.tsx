@@ -43,12 +43,12 @@ export function ProjectCard({
   return (
     <Card
       className={
-        "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
+        "group/card flex h-full flex-col overflow-hidden border transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-foreground/20 hover:shadow-lg"
       }
     >
       {(image || video) && <Link
         href={href || "#"}
-        className={cn("block cursor-pointer", className)}
+        className={cn("block cursor-pointer overflow-hidden border-b", className)}
       >
         {video && (
           <video
@@ -67,14 +67,24 @@ export function ProjectCard({
             width={768}
             height={512}
             sizes="(min-width: 640px) 336px, 100vw"
-            className="aspect-[3/2] w-full object-cover"
+            className="aspect-[3/2] w-full object-cover transition-transform duration-500 ease-out group-hover/card:scale-[1.02]"
           />
         )}
       </Link>}
-      <CardHeader className="px-2">
+      <CardHeader className="px-3 pt-3">
         <div className="space-y-1">
-          <CardTitle className="mt-1 text-base">
-            {href ? <Link href={href}>{title}</Link> : title}
+          <CardTitle className="text-base">
+            {href ? (
+              <Link href={href} className="inline-flex items-center gap-1">
+                {title}
+                <ArrowUpRight
+                  aria-hidden="true"
+                  className="size-3.5 text-muted-foreground opacity-0 transition-opacity group-hover/card:opacity-100"
+                />
+              </Link>
+            ) : (
+              title
+            )}
           </CardTitle>
           {/* <time className="font-sans text-xs">{dates}</time> */}
           <div className="hidden font-sans text-xs underline print:visible">
@@ -85,7 +95,7 @@ export function ProjectCard({
           </Markdown>
         </div>
       </CardHeader>
-      <CardContent className="mt-auto flex flex-col px-2">
+      <CardContent className="mt-auto flex flex-col px-3">
         {tags && tags.length > 0 && (
           <div className="mt-2 flex flex-wrap gap-1">
             {tags?.map((tag) => (
@@ -101,7 +111,7 @@ export function ProjectCard({
         )}
       </CardContent>
       {links && links.length > 0 && (
-        <CardFooter className="justify-end gap-3 px-2 pb-2 pt-3">
+        <CardFooter className="justify-end gap-3 px-3 pb-3 pt-3">
           {links.map((link) => (
             <Link
               href={link.href}

@@ -1,22 +1,17 @@
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
-import { ProjectCard } from "@/components/project-card";
+import { ProjectsSection } from "@/components/projects-section";
 import { ResumeCard } from "@/components/resume-card";
 import { ToolsOfChoice } from "@/components/tools-of-choice";
 import { ListeningTo } from "@/components/listening-to";
 import { AiUsageChart } from "@/components/ai-usage-chart";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { DATA, FEATURED_PROJECTS } from "@/data/resume";
-import { ArrowRight } from "lucide-react";
+import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
-
-const featuredProjects = DATA.projects.filter((project) =>
-  (FEATURED_PROJECTS as readonly string[]).includes(project.title),
-);
 
 export default function Page() {
   return (
@@ -98,47 +93,7 @@ export default function Page() {
           ))}
         </div>
       </section>
-      <section id="projects" aria-labelledby="projects-title">
-        <div className="space-y-4">
-          <BlurFade delay={BLUR_FADE_DELAY * 7}>
-            <h2 id="projects-title" className="text-xl font-bold">
-              Personal Projects
-            </h2>
-          </BlurFade>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {featuredProjects.map((project, id) => (
-              <BlurFade
-                key={project.title}
-                delay={BLUR_FADE_DELAY * 8 + id * 0.05}
-              >
-                <ProjectCard
-                  href={project.href}
-                  title={project.title}
-                  description={project.description}
-                  tags={project.technologies}
-                  links={project.links}
-                  image={project.image}
-                />
-              </BlurFade>
-            ))}
-            <BlurFade delay={BLUR_FADE_DELAY * 8 + featuredProjects.length * 0.05}>
-              <Link
-                href="/projects"
-                className="group flex h-full min-h-40 flex-col items-center justify-center gap-2 rounded-lg border border-dashed p-6 text-center transition-colors hover:bg-muted/50"
-              >
-                <span className="text-sm font-medium">View all projects</span>
-                <span className="text-xs text-muted-foreground">
-                  {DATA.projects.length} projects
-                </span>
-                <ArrowRight
-                  aria-hidden="true"
-                  className="size-4 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:text-foreground"
-                />
-              </Link>
-            </BlurFade>
-          </div>
-        </div>
-      </section>
+      <ProjectsSection delay={BLUR_FADE_DELAY * 7} />
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
